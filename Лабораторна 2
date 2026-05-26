@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота: Таблиці та Списки в HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .left-align {
+            text-align: left;
+        }
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Лабораторна робота 2 </h1>
+
+    <section>
+        <h2>1. Таблиця розкладу занять на тиждень</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>№ пари</th>
+                    <th>Час</th>
+                    <th>Понеділок</th>
+                    <th>Вівторок</th>
+                    <th>Середа</th>
+                    <th>Четвер</th>
+                    <th>П'ятниця</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>08:30 - 10:05</td>
+                    <td>Вища математика<br><small>ауд. 402</small></td>
+                    <td>Фізика<br><small>ауд. 215</small></td>
+                    <td>Іноземна мова<br><small>ауд. 101</small></td>
+                    <td>Програмування<br><small>лаб. 305</small></td>
+                    <td>Історія України<br><small>ауд. 410</small></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>10:25 - 12:00</td>
+                    <td>Програмування<br><small>лекц. 201</small></td>
+                    <td>Алгоритми<br><small>ауд. 308</small></td>
+                    <td>Фізичне виховання<br><small>Спортзал</small></td>
+                    <td>Вища математика<br><small>ауд. 402</small></td>
+                    <td>Бази даних<br><small>лаб. 302</small></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>12:20 - 13:55</td>
+                    <td>Філософія<br><small>ауд. 415</small></td>
+                    <td>Дискретна математика<br><small>ауд. 202</small></td>
+                    <td>Програмування<br><small>лаб. 305</small></td>
+                    <td>WEB-технології<br><small>лекц. 104</small></td>
+                    <td>---</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="7">* У розкладі можливі зміни. Слідкуйте за оголошеннями деканату.</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section>
+        <h2>2. Таблиця з об'єднаними комірками (Звіт про продажі)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">Категорія товару</th>
+                    <th rowspan="2">Назва товару</th>
+                    <th colspan="2">Продажі за квартал</th>
+                    <th rowspan="2">Загальний дохід</th>
+                </tr>
+                <tr>
+                    <th>Місяць 1</th>
+                    <th>Місяць 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Електроніка</td>
+                    <td class="left-align">Смартфон Alpha</td>
+                    <td>120 шт.</td>
+                    <td>150 шт.</td>
+                    <td>$27,000</td>
+                </tr>
+                <tr>
+                    <td class="left-align">Ноутбук Omega</td>
+                    <td>45 шт.</td>
+                    <td>60 шт.</td>
+                    <td>$73,500</td>
+                </tr>
+                <tr>
+                    <td>Аксесуари</td>
+                    <td class="left-align">Навушники Бездротові</td>
+                    <td>300 шт.</td>
+                    <td>280 шт.</td>
+                    <td>$11,600</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="left-align"><strong>Разом:</strong></td>
+                    <td><strong>$112,100</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section>
+        <h2>3. Списки різних типів та їх комбінування</h2>
+
+        <h3>А. Багаторівневий список меню сайту (Вкладені списки)</h3>
+        <ul>
+            <li>Головна</li>
+            <li>Про нас
+                <ul>
+                    <li>Наша історія</li>
+                    <li>Команда</li>
+                    <li>Вакансії</li>
+                </ul>
+            </li>
+            <li>Послуги
+                <ul>
+                    <li>Веб-розробка
+                        <ul>
+                            <li>Frontend (HTML/CSS/JS)</li>
+                            <li>Backend (Node.js/Python)</li>
+                        </ul>
+                    </li>
+                    <li>Дизайн</li>
+                    <li>SEO-оптимізація</li>
+                </ul>
+            </li>
+            <li>Контакти</li>
+        </ul>
+
+        <hr>
+
+        <h3>Б. Список з різними маркерами (type для ul)</h3>
+        <ul type="square">
+            <li>Елемент із квадратним маркером (square)</li>
+            <li>Ще один квадратний елемент</li>
+        </ul>
+        <ul type="circle">
+            <li>Елемент із круглим контурним маркером (circle)</li>
+            <li>Наступний елемент лінійного списку</li>
+        </ul>
+
+        <hr>
+
+        <h3>В. Нумерований список з різними типами нумерації (type для ol)</h3>
+        <p><strong>Римські великі цифри (I, II, III):</strong></p>
+        <ol type="I">
+            <li>Вступ до веб-технологій</li>
+            <li>Основи мови розмітки HTML</li>
+            <li>Стилізація за допомогою CSS</li>
+        </ol>
+
+        <p><strong>Латинські літери (a, b, c):</strong></p>
+        <ol type="a">
+            <li>Перший підпункт</li>
+            <li>Другий підпункт</li>
+            <li>Третій підпункт</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>4. Список визначений (Теги dl, dt, dd)</h2>
+        <dl>
+            <dt><strong>HTML</strong></dt>
+            <dd>HyperText Markup Language (Мова розмітки гіпертексту) — стандартизована мова розмітки документів для перегляду веб-сторінок у браузері.</dd>
+            
+            <dt><strong>CSS</strong></dt>
+            <dd>Cascading Style Sheets (Каскадні таблиці стилів) — спеціальна мова, що використовується для опису зовнішнього вигляду сторінок, написаних мовами розмітки.</dd>
+            
+            <dt><strong>Тег</strong></dt>
+            <dd>Основний елемент розмітки мови HTML, що використовується для вказівки браузеру, як саме слід відображати контент.</dd>
+        </dl>
+    </section>
+
+</body>
+</html>
